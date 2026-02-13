@@ -1,4 +1,4 @@
-# Patch-Recovery
+# Fastbootd Recovery Patch for Samsung devices.
 This script patches recovery images of Samsung devices to enable Fastbootd. 
 Based on Phh's [script.](https://github.com/phhusson/samsung-galaxy-a51-gsi-boot)
 
