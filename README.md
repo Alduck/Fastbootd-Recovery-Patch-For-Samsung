@@ -1,27 +1,47 @@
-# Similar script
-You can also refer this [script](https://github.com/engineer4t/fastboot-patcher)
-
-
 # Patch-Recovery
-This CI service patches recovery images of Samsung to enable Fastbootd. Based on Phh's [script](https://github.com/phhusson/samsung-galaxy-a51-gsi-boot)
+This script patches recovery images of Samsung devices to enable Fastbootd. 
+Based on Phh's [script.](https://github.com/phhusson/samsung-galaxy-a51-gsi-boot)
 
 # How to use:
+
+# FOR A ONLY DEVICES 
+- Download your desired build from samfw or any other reliable source.
+- Extract it, and then extract the AP file.
+- Look at the AP file for recovery.img.lz4. Copy it to somewhere you'll remember.
 - Fork this repo.
-- Extract your recovery.img.lz4 and upload recovery.img or *img.lz4 to nextcloud or any other file hosting sites. Once uploaded right click on the Download button and copy the URL.
+- Extract your recovery.img.lz4 and upload recovery.img or *img.lz4 to [catbox.](https://catbox.moe/) 
 - Head over to Actions tab. Click on RECOVERY -> Run workflow. Insert the copied URL in the RECOVERY URL field and Start the workflow
-- The Patching process will start
+- The Patching process will start.
 - A Patched-Recovery.zip will be uploaded at the end of the process. Download it and extract your patched recovery image. The Image will already also be repacked to .tar for flashing directly through Odin
 ![](https://s3.bmp.ovh/imgs/2022/04/19/91ef3a3ee9255e9c.png)
-- Flash vbmeta_disabled_r if needed
+- Flash your own patched vbmeta if needed.
 
 ```
-ODIN AP Slot: Recovery.tar.md5
-ODIN User Slot: vbmeta_disabled_r.tar
+ODIN AP Slot: fastbootd-recovery.tar.md5
+ODIN Userdata Slot: vbmeta_disabled.tar
+```
+
+# FOR A/B DEVICES (example: Galaxy S25 series, Galaxy A55)
+- Download your desired build from samfw or any other reliable source.
+- Extract it, and then extract the AP file.
+- Look at the AP file for vendor_boot.img.lz4. Copy it to somewhere you'll remember.
+- Fork this repo.
+- Extract your vendor_boot.img.lz4 and upload vendor_boot.img or *img.lz4 to [catbox.](https://catbox.moe/) 
+- Head over to Actions tab. Click on VENDOR_BOOT -> Run workflow. Insert the copied URL in the VENDOR_BOOT URL field and Start the workflow
+- The Patching process will start.
+- A Patched-VENDOR_BOOT.zip will be uploaded at the end of the process. Download it and extract your patched vendor_boot image. The Image will already also be repacked to .tar for flashing directly through Odin
+![](https://s3.bmp.ovh/imgs/2022/04/19/91ef3a3ee9255e9c.png)
+- Flash your own patched vbmeta if needed.
+
+```
+ODIN AP Slot: fastbootd-vendor_boot.tar.md5
+ODIN Userdata Slot: vbmeta_disabled.tar
 ```
 
 # Important note
-- Make sure that the uploaded file can downloaded with wget command and will download a correct file. Nextcloud with public link works fine if you open the link on web and copy the url from the download button.
+- Make sure that the uploaded file can downloaded with wget command and will download a correct file. Catbox works fine.
 
 # Credits
 - [Phhusson](https://github.com/phhusson) Without his script nothing would be possible at the first place
 - [James Nguyen](https://github.com/thongass000) Helping me in simplifying the scripts and tweaking it
+- [Johx22](https://github.com/Johx22) Revamped scripts
