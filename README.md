@@ -12,8 +12,7 @@ Based on Phh's [script.](https://github.com/phhusson/samsung-galaxy-a51-gsi-boot
 - Extract your recovery.img.lz4 and upload recovery.img or *img.lz4 to [catbox.](https://catbox.moe/) 
 - Head over to Actions tab. Click on RECOVERY -> Run workflow. Insert the copied URL in the RECOVERY URL field and Start the workflow
 - The Patching process will start.
-- A Patched-Recovery.zip will be uploaded at the end of the process. Download it and extract your patched recovery image. The Image will already also be repacked to .tar for flashing directly through Odin
-![](https://s3.bmp.ovh/imgs/2022/04/19/91ef3a3ee9255e9c.png)
+- A Patched-Recovery.zip will be uploaded at the end of the process. Download it and extract your patched recovery image. The Image will already also be repacked to .tar for flashing directly through Odin.
 - Flash your own patched vbmeta if needed.
 
 ```
@@ -29,8 +28,7 @@ ODIN Userdata Slot: vbmeta_disabled.tar
 - Extract your vendor_boot.img.lz4 and upload vendor_boot.img or *img.lz4 to [catbox.](https://catbox.moe/) 
 - Head over to Actions tab. Click on VENDOR_BOOT -> Run workflow. Insert the copied URL in the VENDOR_BOOT URL field and Start the workflow
 - The Patching process will start.
-- A Patched-VENDOR_BOOT.zip will be uploaded at the end of the process. Download it and extract your patched vendor_boot image. The Image will already also be repacked to .tar for flashing directly through Odin
-![](https://s3.bmp.ovh/imgs/2022/04/19/91ef3a3ee9255e9c.png)
+- A Patched-VENDOR_BOOT.zip will be uploaded at the end of the process. Download it and extract your patched vendor_boot image. The Image will already also be repacked to .tar for flashing directly through Odin.
 - Flash your own patched vbmeta if needed.
 
 ```
